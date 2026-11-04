@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoLink</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <img class="logo" src="Images/logompng.png" alt="Logo MotoLink">
+    <div class="home-grid">
+
+        <div class="home-card">
+            <i data-lucide="users"></i>
+            <p>Comunitate</p>
+        </div>
+
+        <div class="home-card">
+             <i data-lucide="siren"></i>
+            <p>SOS Urgență</p>
+        </div>
+
+        <a href="Trasee.html" class="home-card">
+        <i data-lucide="route"></i>
+        <p>Live Ride</p>
+        </a>
+
+        <div class="home-card">
+              <i data-lucide="map-pin"></i>
+            <p>Locuri Favorite</p>
+        </div>
+
+        <div class="home-card moto-ai">
+            <i data-lucide="bot"></i>
+            <p>Moto AI</p>
+        </div>
+
+        <div class="live-status">
+        <span>Live Ride</span>
+
+        <label class="switch">
+        <input type="checkbox" class="ride-toggle">
+        <span class="slider"></span>
+    </label>
+</div>
+</div>
+    <div class="quick-menu">
+    <button type="button" onclick="deschideIncident()">
+    <i data-lucide="triangle-alert"></i>
+    Raportează incident
+    </button>
+
+    <button type="button">
+    <i data-lucide="map-pin-plus"></i>
+    Adaugă loc favorit
+    </button>
+</div>
+<div class="incident-form">
+    <h2>Raporteaza incident</h2>
+
+    <label for="incident-type">Tipul incidentului</label>
+
+    <select id="incident-type">
+        <option value="accident">Accident rutier</option>
+        <option value="obstacol">Obstacol pe drum</option>
+        <option value="drum">Drum deteriorat</option>
+    </select>
+
+    <label for="incident-description">Descriere</label>
+
+    <textarea id="incident-description"
+              placeholder="Descrie pericolul observat..."></textarea>
+
+    <button type="button">Trimite raportarea</button>
+</div>
+  <nav class="bottom-nav">
+    <a href="index.html" class ="active">
+        <i data-lucide="house"></i>
+        <span>Acasă</span>
+    </a>
+
+    <a href="#">
+        <i data-lucide="users"></i>
+        <span>Prieteni</span>
+    </a>
+
+    <button type="button" onclick="deschideMeniu()">+</button>
+
+    <a href="#">
+        <i data-lucide="map"></i>
+        <span>Hartă</span>
+    </a>
+
+    <a href="#">
+        <i data-lucide="user-round"></i>
+        <span>Profil</span>
+    </a>
+</nav>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+<script>
+    function deschideMeniu() 
+    {
+    const meniu = document.querySelector(".quick-menu");
+
+    if (meniu.style.display === "block") {
+        meniu.style.display = "none";
+    } else {
+        meniu.style.display = "block";
+    }
+    }
+    function deschideIncident() 
+    {
+    const formular = document.querySelector(".incident-form");
+    formular.style.display = "block";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+h1{color:#0D0D0D;}
+button 
+{
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+}
+.live-ride
+{  background-color:#E10600;
+    color:white;padding:12px 24px;
+    border:none;
+    border-radius:8px;
+}
+.sos{background-color:#FF6B00;color:white;}
+.buttons
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.card
+{
+    background-color:#F4F4F4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 350px;
+}
+.logo 
+{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.back-home 
+{
+    background-color: red;
+    color: white;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.back-home:hover 
+{
+    background-color: darkred;
+}
+.home-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    width: 90%;
+    box-sizing: border-box;
+}
+.home-card 
+{
+    background-color: #F4F4F4;
+    border: 1px solid #6B6B6B;
+    border-radius: 25px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.card-icon 
+{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #6B6B6B;
+    border-radius: 50%;
+}
+.moto-ai 
+{
+    grid-column: span 2;
+}
+.live-status 
+{
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    border: 1px solid #6B6B6B;
+    border-radius: 10px;
+    padding: 15px;
+}
+.switch 
+{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.ride-toggle 
+{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider 
+{
+    position: absolute;
+    inset: 0;
+    background-color: #6B6B6B;
+    border-radius: 24px;
+    pointer-events: none;
+}
+
+.slider::before 
+{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.ride-toggle:checked + .slider 
+{
+    background-color: #E10600;
+}
+
+.ride-toggle:checked + .slider::before 
+{
+    transform: translateX(20px);
+}
+.bottom-nav 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #F4F4F4;
+    padding: 15px;
+    border-top: 1px solid #6B6B6B;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.bottom-nav a 
+{
+    text-decoration: none;
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 14px;
+}
+.bottom-nav button 
+{
+    background-color: #0D0D0D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-card svg 
+{
+    color: #E10600;
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+}
+.bottom-nav a 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.bottom-nav a.active 
+{
+    color: #E10600;
+}
+.bottom-nav a.active svg 
+{
+    color: #E10600;
+}
+.home-card 
+{
+    text-decoration: none;
+    color: #0D0D0D;
+}
+.home-card:hover 
+{
+    transform: translateY(-5px);
+    border-color: #E10600;
+}
+.home-card:active 
+{
+    transform: scale(0.97);
+}
+.quick-menu 
+{
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0D0D0D;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    z-index: 10;
+}
+.quick-menu button 
+{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    gap: 10px;
+}
+.quick-menu button:hover 
+{
+    background-color: #333333;
+}
+.quick-menu button svg 
+{
+    width: 20px;
+    height: 20px;
+    color: #E10600;
+}
+.incident-form 
+{
+    display: none;
+}
