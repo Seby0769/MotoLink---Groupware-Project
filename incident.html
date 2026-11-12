@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoLink - Raportează incident</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="incident-page">
+
+    <a href="index.html">← Înapoi acasă</a>
+
+    <h1>Raportează incident</h1>
+    <p>Ajută comunitatea MotoLink să circule în siguranță!</p>
+
+    <form class="incident-report">
+
+        <label for="tip-incident">Tipul incidentului</label>
+
+        <select id="tip-incident" name="tip-incident">
+            <option value="accident">Accident rutier</option>
+            <option value="obstacol">Obstacol pe drum</option>
+            <option value="drum">Drum deteriorat</option>
+        </select>
+
+        <label for="descriere">Descrierea incidentului</label>
+
+        <textarea
+            id="descriere"
+            name="descriere"
+            rows="4"
+            placeholder="Descrie pericolul observat..."></textarea>
+
+        <button type="submit" class="submit-incident">
+            Trimite raportarea
+        </button>
+        <p id="mesaj-incident" style="display: none;">
+    Raportarea a fost completată!
+    </p>
+
+    </form>
+    <script src="script.js"></script>
+
+</body>
+</html>

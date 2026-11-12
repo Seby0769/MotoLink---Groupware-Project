@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+    <script src="script.js"></script>
 <body>
 
     <img class="logo" src="Images/logompng.png" alt="Logo MotoLink">
@@ -47,19 +48,23 @@
     </label>
 </div>
 </div>
-    <div class="quick-menu">
-    <button type="button" onclick="deschideIncident()">
-    <i data-lucide="triangle-alert"></i>
-    Raportează incident
-    </button>
+  <div class="quick-menu">
+    <a href="incident.html">
+        <i data-lucide="triangle-alert"></i>
+        Raportează incident
+    </a>
 
-    <button type="button">
+    <a href="favorite.html">
     <i data-lucide="map-pin-plus"></i>
     Adaugă loc favorit
-    </button>
+    </a>
 </div>
 <div class="incident-form">
     <h2>Raporteaza incident</h2>
+  <a href="incident.html">
+    <i data-lucide="triangle-alert"></i>
+    Raportează incident
+</a>
 
     <label for="incident-type">Tipul incidentului</label>
 
@@ -103,23 +108,5 @@
 <script>
     lucide.createIcons();
 </script>
-<script>
-    function deschideMeniu() 
-    {
-    const meniu = document.querySelector(".quick-menu");
-
-    if (meniu.style.display === "block") {
-        meniu.style.display = "none";
-    } else {
-        meniu.style.display = "block";
-    }
-    }
-    function deschideIncident() 
-    {
-    const formular = document.querySelector(".incident-form");
-    formular.style.display = "block";
-    }
-</script>
-
 </body>
 </html>
