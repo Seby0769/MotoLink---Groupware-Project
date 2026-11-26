@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoLink - Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+
+    <h1>Profilul meu</h1>
+    <p>Gestionează-ți profilul de motociclist.</p>
+
+    <div class="profile-container">
+
+        <div class="profile-avatar">
+            <i data-lucide="user-round"></i>
+        </div>
+
+        <h2 id="display-name">Alex Moto</h2>
+        <p class="profile-username">@alexmoto</p>
+
+        <div class="profile-details">
+            <p id="display-motorcycle">🏍️ Yamaha MT-07</p>
+            <p id="display-city">📍 Iași, România</p>
+            <p id="display-bio">Motociclist pasionat de aventură și trasee montane.</p>
+        </div>
+
+        <div class="profile-stats">
+            <div>
+                <strong>12</strong>
+                <span>Prieteni</span>
+            </div>
+            <div>
+                <strong>5</strong>
+                <span>Trasee</span>
+            </div>
+            <div>
+                <strong>8</strong>
+                <span>Favorite</span>
+            </div>
+        </div>
+
+        <button class="edit-profile-btn" type="button">
+            Editează profilul
+        </button>
+
+        <form id="edit-profile-form" hidden>
+            <input type="text" id="profile-name" placeholder="Numele tău" required>
+            <input type="text" id="profile-motorcycle" placeholder="Motocicleta">
+            <input type="text" id="profile-city" placeholder="Orașul">
+            <textarea id="profile-bio" placeholder="Descrierea ta"></textarea>
+
+            <button type="submit">Salvează modificările</button>
+        </form>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
